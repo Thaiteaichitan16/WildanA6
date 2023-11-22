@@ -26,6 +26,7 @@ public class ModelDatabase {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             konek = DriverManager.getConnection("jdbc:mysql://localhost:3306/laravel_spp","root","");
+            
         } catch (ClassNotFoundException | SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
@@ -54,4 +55,8 @@ public class ModelDatabase {
             return false;
         }
     }    
+
+    public ResultSet ambilData(String sql) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -5,7 +5,7 @@
  */
 
 package Form;
-
+import Lib.OPetugas;
 /**
  *
  * @author Lenovo
@@ -15,6 +15,7 @@ public class Utama extends javax.swing.JFrame {
     /** Creates new form Utama */
     public Utama() {
         initComponents();
+        ngaran.setText(OPetugas.getNama_petugas().toString());
     }
 
     /** This method is called from within the constructor to
@@ -28,11 +29,24 @@ public class Utama extends javax.swing.JFrame {
 
         desktopPane = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
+        ngaran = new javax.swing.JMenu();
         Petugas = new javax.swing.JMenu();
         Kelas = new javax.swing.JMenu();
         Spp = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        ngaran.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ngaranMouseClicked(evt);
+            }
+        });
+        ngaran.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ngaranActionPerformed(evt);
+            }
+        });
+        jMenuBar1.add(ngaran);
 
         Petugas.setText("Petugas");
         Petugas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -95,6 +109,14 @@ public class Utama extends javax.swing.JFrame {
         SP.setVisible(true);
     }//GEN-LAST:event_SppMouseClicked
 
+    private void ngaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ngaranActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ngaranActionPerformed
+
+    private void ngaranMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ngaranMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ngaranMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -136,6 +158,7 @@ public class Utama extends javax.swing.JFrame {
     private javax.swing.JMenu Spp;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu ngaran;
     // End of variables declaration//GEN-END:variables
 
 }
