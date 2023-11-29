@@ -36,6 +36,7 @@ public class Utama extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        ngaran.setText("Nama Petugas");
         ngaran.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ngaranMouseClicked(evt);
@@ -86,6 +87,7 @@ public class Utama extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void PetugasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PetugasMouseClicked

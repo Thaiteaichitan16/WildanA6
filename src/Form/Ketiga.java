@@ -4,19 +4,21 @@
  * and open the template in the editor.
  */
 package Form;
-import Lib.OPetugas;
+
+import Lib.OSiswa;
+
 /**
  *
  * @author Lenovo
  */
-public class Kedua extends javax.swing.JFrame {
+public class Ketiga extends javax.swing.JFrame {
 
     /**
-     * Creates new form kedua
+     * Creates new form Ketiga
      */
-    public Kedua() {
+    public Ketiga() {
         initComponents();
-        ngaran.setText(OPetugas.getNama_petugas().toString());
+        nama_siswa.setText(OSiswa.getNama().toString());
     }
 
     /**
@@ -30,25 +32,23 @@ public class Kedua extends javax.swing.JFrame {
 
         desktopPane = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
-        ngaran = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        nama_siswa = new javax.swing.JMenu();
+        his = new javax.swing.JMenu();
+        pembayaran = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ngaran.setText("Nama Petugas");
-        menuBar.add(ngaran);
+        desktopPane.setBackground(new java.awt.Color(255, 204, 204));
+        desktopPane.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jMenu2.setText("Entri Transaksi");
-        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu2MouseClicked(evt);
-            }
-        });
-        menuBar.add(jMenu2);
+        nama_siswa.setText("nama siswa");
+        menuBar.add(nama_siswa);
 
-        jMenu3.setText("Histroy Pembayaran");
-        menuBar.add(jMenu3);
+        his.setText("History");
+        menuBar.add(his);
+
+        pembayaran.setText("Pembayaran");
+        menuBar.add(pembayaran);
 
         setJMenuBar(menuBar);
 
@@ -56,23 +56,16 @@ public class Kedua extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1009, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1209, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 547, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
-        // TODO add your handling code here:
-        Pembayaran PB = new Pembayaran();
-        desktopPane.add(PB);
-        PB.setVisible(true);
-    }//GEN-LAST:event_jMenu2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -91,31 +84,30 @@ public class Kedua extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Kedua.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ketiga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Kedua.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ketiga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Kedua.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ketiga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Kedua.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ketiga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Kedua().setVisible(true);
+                new Ketiga().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu his;
     private javax.swing.JMenuBar menuBar;
-    private javax.swing.JMenu ngaran;
+    private javax.swing.JMenu nama_siswa;
+    private javax.swing.JMenu pembayaran;
     // End of variables declaration//GEN-END:variables
 
 }
